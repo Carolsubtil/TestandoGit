@@ -28,10 +28,14 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    flex:1,
   },
   header:{
       minHeight:93,
       backgroundColor: "#2C4877",
       paddingTop:40,
+      flexDirection:"row",
+      justifyContent:"space-between",
+      paddingHorizontal:30,
   },
 });
