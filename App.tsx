@@ -5,17 +5,21 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello world</Text>
-      <StatusBar style="auto" />
+        <View style={styles.header}>
+            <Text>Oi</Text>
+        </View>
+        <Text>Hello World!</Text>
+        <StatusBar style="auto"  />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  header:{
+      height:93,
+      backgroundColor: "#2C4877",
+      paddingTop:40,
   },
 });
