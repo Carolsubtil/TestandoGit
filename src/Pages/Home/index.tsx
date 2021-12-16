@@ -15,7 +15,7 @@ const LinkItem = (props:any)=>{
 
 
 const LinksImportantes = ()=>{
-    return(//Aqui dentro ficará o nosso JSX
+    return(
         <View style={stylesLinkImportantes.container}>
             <LinkItem name="Home"/>
             <LinkItem name="Post"/>
@@ -65,10 +65,13 @@ const Home = () => {
             <StatusBar style="auto"  />
             <View style={styles.conteudoFacebook}>
                 <Post />
-                {}
+                {/*
+                <View style={styles.conteudoFacebook}>
                 <TouchableOpacity style={styles.meubotao} onPress={irParaTelaLogin}>
                     <Text style={styles.meubotaoTexto}>Ir para segunda tela</Text>
                 </TouchableOpacity>
+                </View>
+                */}  
             </View>
         </View>
     );
