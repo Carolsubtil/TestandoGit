@@ -3,6 +3,9 @@ import {Text, View, Image, TextInput,TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import {stylesLink,stylesLinkImportantes,styles} from './styles';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import { StackNavigatorParamList } from '../../../types';
 
 const LinkItem = (props:any)=>{
     return(
@@ -23,8 +26,16 @@ const LinksImportantes = ()=>{
     );
 };
 
+type HomeProps = NativeStackNavigationProp<StackNavigatorParamList,"Home">;
 
 const Home = () => {
+
+    const navigation = useNavigation<HomeProps>();
+
+    function irParaTelaLogin(){
+        navigation.navigate('Login');
+    }
+
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -53,7 +64,7 @@ const Home = () => {
             <LinksImportantes />
             <StatusBar style="auto"  />
             <View style={styles.conteudoFacebook}>
-                <TouchableOpacity style={styles.meubotao}>
+            <TouchableOpacity style={styles.meubotao} onPress={irParaTelaLogin}>
                     <Text style={styles.meubotaoTexto}>Ir para segunda tela</Text>
                 </TouchableOpacity>
             </View>
